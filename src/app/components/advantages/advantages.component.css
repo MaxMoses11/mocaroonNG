@@ -1,0 +1,59 @@
+.advantages-item-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #821328;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transition: background-color 0.3s ease;
+
+}
+
+.advantages-item-icon span {
+  font-size: 60px;
+  font-family: "GilroyExtraBold", sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 0.75;
+  transition: color 0.5s ease;
+}
+
+.advantages-item:hover .advantages-item-icon {
+  background-color: #eba8b1;
+}
+
+.advantages-item:hover .advantages-item-icon span {
+  color: #821328;
+}
+
+.advantages-item-title {
+  font-size: 20px;
+  font-family: "GilroyExtraBold", sans-serif;
+  color: rgb(51, 25, 7);
+  margin: 13px 0 20px;
+}
+
+.advantages-item-text {
+  font-size: 15px;
+  font-family: "GilroyMedium", sans-serif;
+  color: rgb(51, 25, 7);
+  line-height: 1.333;
+}
+
+@media screen and (max-width:1023px) {
+  .advantages-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width:599px) {
+  .advantages-item-title {
+    font-size: 18px;
+  }
+
+  .advantages-item-text {
+    font-size: 13px;
+  }
+}

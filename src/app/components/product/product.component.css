@@ -1,0 +1,47 @@
+.products-item {
+  border: 2px solid white;
+  border-radius: 20px;
+  height: 225px;
+  display: grid;
+  grid-template: 43px 50px / 1fr 1fr;
+  justify-items: center;
+  padding: 109px 21px 27px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.products-item-image {
+  position: absolute;
+  bottom: 157px;
+  transition: all 0.3s linear;
+}
+
+.products-item:hover .products-item-image {
+  transform: scale(1.1);
+}
+
+.products-item-title {
+  grid-column: 1 / 3;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  align-self: end;
+  margin-bottom: 26px;
+}
+
+.products-item-info {
+  font-size: 15px;
+  font-family: "GilroyRegular", sans-serif;
+  color: rgb(255, 255, 255);
+  justify-self: left;
+}
+
+.products-item-amount {
+  margin-bottom: 6px;
+}
+
+.products-item-btn {
+  width: 130px;
+  height: 50px;
+  border-radius: 25px;
+  padding: 16px 0 23px;
+}

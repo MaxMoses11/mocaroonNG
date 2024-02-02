@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {AdvantageType} from "./types/advantage.type";
 import {ProductType} from "./types/product.type";
 import {FormValuesType} from "./types/form-values.type";
+import {CartService} from "./services/cart.service";
+import {ProductsService} from "./services/products.service";
 
 @Component({
   selector: 'app-root',
@@ -9,8 +11,8 @@ import {FormValuesType} from "./types/form-values.type";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public hidePresent: boolean = false;
-  public phone: string = '+375 (29) 368-98-68';
+  public hideCart: boolean = false;
+  public phone: string = '375293689868';
   public instagramLink: string = 'https://instagram.com';
 
   public advantages: AdvantageType[] = [
@@ -32,38 +34,18 @@ export class AppComponent {
     },
   ];
 
-  public products: ProductType[] = [
-    {
-      image: 'prod1.png',
-      title: 'Макарун с малиной',
-      amount: '1',
-      prise: '1,7',
-    },
-    {
-      image: 'prod2.png',
-      title: 'Макарун с манго',
-      amount: '1',
-      prise: '1,7',
-    },
-    {
-      image: 'prod3.png',
-      title: 'Макарун с ванилью',
-      amount: '1',
-      prise: '1,7',
-    },
-    {
-      image: 'prod4.png',
-      title: 'Макарун с фисташками',
-      amount: '1',
-      prise: '1,7',
-    },
-  ];
+  public products: ProductType[] = [];
 
   public formValues: FormValuesType = {
     productTitle: '',
     clientName: '',
     phone: '',
   };
+
+  constructor( public productService: ProductsService,
+               public cartService: CartService) {
+    this.products = productService.getProducts();
+  }
 
   public scrollTo(element: HTMLElement): void {
     element.scrollIntoView({behavior: "smooth"});
@@ -72,6 +54,9 @@ export class AppComponent {
   public addToCart(product: ProductType, element: HTMLElement): void {
     this.scrollTo(element);
     this.formValues.productTitle = product.title.toUpperCase();
+    this.cartService.quantity++;
+    this.cartService.amount += product.price;
+    alert(`${product.title} добавлен в корзину!`);
   };
 
   public createOrder(): void {
@@ -96,4 +81,6 @@ export class AppComponent {
       phone: '',
     }
   };
+
+  protected readonly CartService = CartService;
 }
