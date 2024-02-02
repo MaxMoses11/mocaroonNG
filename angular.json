@@ -6,6 +6,9 @@
     "KZ_20": {
       "projectType": "application",
       "schematics": {},
+      "i18n": {
+        "sourceLocale": "ru-RU"
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
