@@ -11,9 +11,7 @@
   list-style: none;
   display: flex;
   gap: 40px;
-
   margin-left: -96px;
-  /*margin-right: 96px;*/
 }
 
 .menu ul a {
@@ -207,7 +205,6 @@
 }
 
 .order-input::placeholder {
-
   color: rgb(118, 12, 34);
 }
 
@@ -218,10 +215,6 @@
   font-size: 18px;
   font-family: "GilroyBold", sans-serif;
   color: rgb(255, 255, 255);
-}
-
-.str {
-
 }
 
 .strawberry-left {

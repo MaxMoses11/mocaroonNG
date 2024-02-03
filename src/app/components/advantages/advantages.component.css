@@ -5,9 +5,8 @@
   background-color: #821328;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   transition: background-color 0.3s ease;
-
 }
 
 .advantages-item-icon span {
@@ -40,7 +39,7 @@
   line-height: 1.333;
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width: 1023px) {
   .advantages-item {
     display: flex;
     flex-direction: column;
@@ -48,7 +47,7 @@
   }
 }
 
-@media screen and (max-width:599px) {
+@media screen and (max-width: 599px) {
   .advantages-item-title {
     font-size: 18px;
   }

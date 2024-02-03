@@ -40,30 +40,25 @@ body {
 }
 
 .btn {
-  background: linear-gradient( 0deg, rgb(79, 6, 22) 0%, rgb(215,72,92) 100%);
   cursor: pointer;
   border: 0;
   box-sizing: border-box;
   font-family: "GilroyBold", sans-serif;
   color: rgb(255, 255, 255);
-  transition: all 300ms ease;
-}
-
-.hover-btn {
-  background: linear-gradient(0deg, rgb(37, 3, 10) 0%, rgb(124, 41, 52) 100%);
+  transition: all .5s ease;
 }
 
 .btn:hover {
   box-shadow: 0 5px 9px 1px rgba(130, 19, 40, 0.5);
 }
 
-@media screen and (max-width:1179px) {
+@media screen and (max-width: 1179px) {
   .container {
     padding: 0 20px;
   }
 }
 
-@media screen and (max-width:424px) {
+@media screen and (max-width: 424px) {
   .container {
     padding-left: 15px;
     padding-right: 15px;
